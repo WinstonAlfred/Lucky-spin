@@ -1,8 +1,23 @@
 'use server'
 
 import { prisma } from '@/lib/prisma'
+import { Participant } from '@prisma/client'
 import { revalidatePath } from 'next/cache'
 
+
+export async function getParticipants(): Promise<Participant[]> {
+  try {
+    const participants = await prisma.participant.findMany({
+      orderBy: {
+        createdAt: 'asc'
+      }
+    })
+    return participants
+  } catch (error) {
+    console.error('Failed to fetch participants:', error)
+    throw new Error('Failed to fetch participants')
+  }
+}
 
 
 export async function createParticipant(formData: FormData) {
