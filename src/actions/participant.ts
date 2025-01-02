@@ -1,4 +1,3 @@
-// src/actions/participant.ts
 'use server'
 
 import { prisma } from '@/lib/prisma'
@@ -19,7 +18,7 @@ export async function createParticipant(formData: FormData) {
     })
     
     revalidatePath('/')
-  } catch (error) {
+  } catch {
     throw new Error('Failed to create participant')
   }
 }
@@ -39,7 +38,7 @@ export async function deleteParticipant(formData: FormData) {
     })
     
     revalidatePath('/')
-  } catch (error) {
+  } catch {
     throw new Error('Failed to delete participant')
   }
 }
@@ -58,7 +57,7 @@ export async function selectWinner() {
     const winner = participants[randomIndex]
     
     return winner
-  } catch (error) {
+  } catch {
     throw new Error('Failed to select winner')
   }
 }
