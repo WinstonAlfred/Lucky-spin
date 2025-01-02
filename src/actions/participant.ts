@@ -4,6 +4,7 @@ import { prisma } from '@/lib/prisma'
 import { revalidatePath } from 'next/cache'
 
 
+
 export async function createParticipant(formData: FormData) {
   const name = formData.get('name') as string
   
@@ -44,7 +45,45 @@ export async function deleteParticipant(formData: FormData) {
   }
 }
 
-export async function selectWinner() {
+export async function SelectAirpodsWinner() {
+  try {
+    // Get all participants
+    const participants = await prisma.participant.findMany()
+    
+    if (participants.length === 0) {
+      throw new Error('No participants available')
+    }
+    
+    // Select random participant
+    const randomIndex = Math.floor(Math.random() * participants.length)
+    const winner = participants[randomIndex]
+    
+    return winner
+  } catch {
+    throw new Error('Failed to select winner')
+  }
+}
+
+export async function SelectHuaweiWinner() {
+  try {
+    // Get all participants
+    const participants = await prisma.participant.findMany()
+    
+    if (participants.length === 0) {
+      throw new Error('No participants available')
+    }
+    
+    // Select random participant
+    const randomIndex = Math.floor(Math.random() * participants.length)
+    const winner = participants[randomIndex]
+    
+    return winner
+  } catch {
+    throw new Error('Failed to select winner')
+  }
+}
+
+export async function SelectMacbookWinner() {
   try {
     // Get all participants
     const participants = await prisma.participant.findMany()
