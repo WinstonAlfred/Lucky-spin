@@ -1,7 +1,6 @@
 // src/app/admin/page.tsx
 import NameTable from '@/components/NameTable'
 import { LotterySection } from '@/components/LotterySection'
-import { Suspense } from 'react'
 
 export const dynamic = 'force-dynamic';
 
