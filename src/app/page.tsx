@@ -3,6 +3,8 @@ import { Suspense } from 'react'
 import NameForm from '@/components/NameForm'
 import NameTable from '@/components/NameTable'
 
+export const dynamic = 'force-dynamic';
+
 export default function Home() {
   return (
     <main className="container mx-auto px-4 py-8">
