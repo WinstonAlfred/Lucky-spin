@@ -9,7 +9,7 @@ export default async function AdminPage() {
     <div className="container mx-auto py-10 space-y-8">
       <div className="flex justify-center gap-12">
         <img
-          src="airpodsclosed.jpg"
+          src="airpodsClosed.jpg"
           alt="Airpods Closed"
           className="max-w-md h-auto"
         />
