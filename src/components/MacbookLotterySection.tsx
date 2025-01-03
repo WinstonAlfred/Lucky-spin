@@ -24,7 +24,6 @@ export function MacbookLotterySection() {
   const INITIAL_SHUFFLE_SPEED = 10; // Start very fast (ms)
   const FINAL_SHUFFLE_SPEED = 250; // End slower (ms)
   const ANIMATION_DURATION = 8000; // 8 seconds total
-  const SPEED_CHANGE_INTERVAL = 1000; // Speed changes every 1 second
 
   useEffect(() => {
     const loadParticipants = async () => {
@@ -52,7 +51,7 @@ export function MacbookLotterySection() {
     if (animationRef.current) return;
     
     let currentSpeed = INITIAL_SHUFFLE_SPEED;
-    let startTime = Date.now();
+    const startTime = Date.now();
 
     const updateAnimation = () => {
       const elapsedTime = Date.now() - startTime;
@@ -186,7 +185,7 @@ export function MacbookLotterySection() {
                   🎉 Congratulations! 🎉
                 </h3>
                 <p className="text-4xl font-bold text-blue-600">{macbookWinner.name}</p>
-                <p className="text-lg text-gray-600">You've won a Macbook AIR M1! 📱</p>
+                <p className="text-lg text-gray-600">You won a Macbook AIR M1! 📱</p>
               </div>
             </CardContent>
           </Card>

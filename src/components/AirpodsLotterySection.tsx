@@ -24,7 +24,6 @@ export function AirpodsLotterySection() {
   const INITIAL_SHUFFLE_SPEED = 1; // Start very fast (ms)
   const FINAL_SHUFFLE_SPEED = 150; // End slower (ms)
   const ANIMATION_DURATION = 8000; // 8 seconds total
-  const SPEED_CHANGE_INTERVAL = 1000; // Speed changes every 1 second
 
   useEffect(() => {
     const loadParticipants = async () => {
@@ -52,7 +51,7 @@ export function AirpodsLotterySection() {
     if (animationRef.current) return;
     
     let currentSpeed = INITIAL_SHUFFLE_SPEED;
-    let startTime = Date.now();
+    const startTime = Date.now();
 
     const updateAnimation = () => {
       const elapsedTime = Date.now() - startTime;
@@ -186,7 +185,7 @@ export function AirpodsLotterySection() {
                 🎉 恭喜您! 🎉
               </h3>
               <p className="text-4xl font-bold text-blue-600">{airpodsWinner.name}</p>
-              <p className="text-lg text-gray-600">You've won a pair of AirPods! 🎧</p>
+              <p className="text-lg text-gray-600">You won a pair of AirPods! 🎧</p>
             </div>
           </CardContent>
         </Card>
