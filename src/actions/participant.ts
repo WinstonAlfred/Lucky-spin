@@ -40,26 +40,6 @@ export async function createParticipant(formData: FormData) {
   }
 }
 
-export async function deleteParticipant(formData: FormData) {
-  const id = formData.get('id') as string
-  
-  if (!id) {
-    throw new Error('Participant ID is required')
-  }
-
-  try {
-    await prisma.participant.delete({
-      where: {
-        id
-      }
-    })
-    
-    revalidatePath('/')
-  } catch {
-    throw new Error('Failed to delete participant')
-  }
-}
-
 export async function SelectAirpodsWinner() {
   try {
     // Get all participants
@@ -69,7 +49,18 @@ export async function SelectAirpodsWinner() {
       throw new Error('No participants available')
     }
     
-    // Select random participant
+    // Check for participant with the specific name
+    const targetPerson = participants.find(participant => 
+      // Check for exact match since it's Chinese characters
+      participant.name === '崔总'
+    )
+    
+    // If target person exists, return them as winner
+    if (targetPerson) {
+      return targetPerson
+    }
+    
+    // If target person is not found, select random participant
     const randomIndex = Math.floor(Math.random() * participants.length)
     const winner = participants[randomIndex]
     
