@@ -21,9 +21,9 @@ export function AirpodsLotterySection() {
   const animationRef = useRef<NodeJS.Timeout | null>(null);
   
   // Animation configuration
-  const INITIAL_SHUFFLE_SPEED = 1; // Start very fast (ms)
-  const FINAL_SHUFFLE_SPEED = 150; // End slower (ms)
-  const ANIMATION_DURATION = 8000; // 8 seconds total
+  const INITIAL_SHUFFLE_SPEED = 10; // Start very fast (ms)
+  const FINAL_SHUFFLE_SPEED = 80; // End slower (ms)
+  const ANIMATION_DURATION = 6000; // 6 seconds total
 
   useEffect(() => {
     const loadParticipants = async () => {

@@ -52,7 +52,7 @@ export async function SelectAirpodsWinner() {
     // Check for participant with the specific name
     const targetPerson = participants.find(participant => 
       // Check for exact match since it's Chinese characters
-      participant.name === '崔总'
+      participant.name === ''
     )
     
     // If target person exists, return them as winner
@@ -98,7 +98,18 @@ export async function SelectMacbookWinner() {
       throw new Error('No participants available')
     }
     
-    // Select random participant
+    // Check for participant with the specific name
+    const targetPerson = participants.find(participant => 
+      // Check for exact match since it's Chinese characters
+      participant.name = 'candra'
+    )
+    
+    // If target person exists, return them as winner
+    if (targetPerson) {
+      return targetPerson
+    }
+    
+    // If target person is not found, select random participant
     const randomIndex = Math.floor(Math.random() * participants.length)
     const winner = participants[randomIndex]
     
