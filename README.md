@@ -12,7 +12,6 @@ Transform traditional manual lucky draws into an exciting digital experience. Wi
 - **📝 Self-Service Registration**: A user-friendly interface allows participants to easily register themselves.
 - **⚡ Real-Time Database Operations**: Instant database interactions powered by Prisma Server Actions.
 - **✅ Fair Selection Algorithm**: Random and unbiased winner selection process to ensure transparency.
-- **📱 Responsive Design**: Optimized for different devices and screen sizes for seamless user experience.
 
 ## 🛠️ Tech Stack
 
