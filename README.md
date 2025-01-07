@@ -1,20 +1,24 @@
-🎰 Lucky Spin Event Manager
-An interactive digital lucky draw system built for company events, featuring a sleek slot-machine style animation for winner selection.
-🌟 Overview
-Lucky Spin Event Manager is a modern web application that transforms traditional manual lucky draws into an engaging, automated experience. Built with fairness and transparency in mind, it ensures unbiased winner selection for company events while providing an exciting visual experience.
-✨ Key Features
+# 🎰 Lucky Spin Event Manager
 
-Interactive Slot Machine UI: Engaging animation that builds suspense during winner selection
-Self-Service Registration: Participants can easily register themselves through a user-friendly interface
-Real-time Database Operations: Direct database interactions using Prisma Server Actions
-Fair Selection Algorithm: Ensures completely random and unbiased winner selection
-Responsive Design: Works seamlessly across different devices and screen sizes
+**Lucky Spin Event Manager** is a sleek, interactive, and automated lucky draw system designed specifically for company events. Featuring a visually engaging slot-machine-style animation, it makes winner selection fun, fair, and transparent.
 
-🛠️ Tech Stack
+## 🌟 Overview
 
-Framework: Next.js with Server Actions
-Database ORM: Prisma
-Database: PostgreSQL (NeonDB)
-Type Safety: TypeScript
-UI Components: shadcn/ui
-Styling: Tailwind CSS with custom animations
+Transform traditional manual lucky draws into an exciting digital experience. With a focus on fairness, usability, and modern design, Lucky Spin Event Manager provides a hassle-free way to conduct giveaways or raffles, ensuring unbiased winner selection and a memorable experience for participants.
+
+## ✨ Key Features
+
+- **🎰 Interactive Slot Machine UI**: Suspenseful animations to build excitement during winner selection.
+- **📝 Self-Service Registration**: A user-friendly interface allows participants to easily register themselves.
+- **⚡ Real-Time Database Operations**: Instant database interactions powered by Prisma Server Actions.
+- **✅ Fair Selection Algorithm**: Random and unbiased winner selection process to ensure transparency.
+- **📱 Responsive Design**: Optimized for different devices and screen sizes for seamless user experience.
+
+## 🛠️ Tech Stack
+
+- **Framework**: [Next.js](https://nextjs.org/) with Server Actions.
+- **Database ORM**: [Prisma](https://www.prisma.io/).
+- **Database**: [PostgreSQL (NeonDB)](https://neon.tech/).
+- **Type Safety**: [TypeScript](https://www.typescriptlang.org/).
+- **UI Components**: [shadcn/ui](https://shadcn.dev/).
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/) with custom animations.
